@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.epam</groupId>
+    <artifactId>clientExample</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <wsdl.url>http://localhost:8088/booking?wsdl</wsdl.url>
+    </properties>
+
+    <build>
+    <plugins>
+    <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>jaxws-maven-plugin</artifactId>
+        <version>1.9</version>
+        <executions>
+            <execution>
+                <goals>
+                    <goal>wsimport</goal>
+                </goals>
+            </execution>
+        </executions>
+        <configuration>
+            <packageName>booking.service</packageName>
+            <wsdlUrls>
+                <wsdlUrl>${wsdl.url}</wsdlUrl>
+            </wsdlUrls>
+            <verbose>true</verbose>
+            <sei/>
+        </configuration>
+    </plugin>
+    </plugins>
+    </build>
+
+</project>
