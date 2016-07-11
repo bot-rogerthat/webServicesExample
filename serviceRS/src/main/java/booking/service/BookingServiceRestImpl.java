@@ -40,13 +40,13 @@ public class BookingServiceRestImpl {
         tickets.add(ticket2);
     }
 
-    @POST
+    @PUT
     @Produces(MediaType.APPLICATION_XML)
     @Path("/bookTicket/{id}")
     public Response bookedTicket(@PathParam("id") int id, Person person) {
         Ticket ticket = tickets.get(id);
         ticket.setPerson(person);
-        ticket.setId(generateId());
+        ticket.setUid(generateId());
         ticket.setState(TicketState.BOOKED);
         return Response.status(Response.Status.OK).entity(ticket).build();
     }
@@ -54,7 +54,7 @@ public class BookingServiceRestImpl {
     @GET
     @Produces(MediaType.APPLICATION_XML)
     @Path("/ticket/{id}")
-    public Response getTickets(@PathParam("id") int id) {
+    public Response getTicketById(@PathParam("id") int id) {
         return Response.status(Response.Status.OK).entity(tickets.get(id)).build();
     }
 
@@ -67,16 +67,16 @@ public class BookingServiceRestImpl {
         return Response.status(Response.Status.OK).entity(entity).build();
     }
 
-    @GET
+    @PUT
     @Produces(MediaType.APPLICATION_XML)
-    @Path("/pay/{id}")
-    public Response payTicket(@PathParam("id") int id) {
+    @Path("/buy/{id}")
+    public Response buyTicket(@PathParam("id") int id) {
         Ticket ticket = tickets.get(id);
         ticket.setState(TicketState.BOUGHT);
         return Response.status(Response.Status.OK).entity(ticket).build();
     }
 
-    @GET
+    @DELETE
     @Produces(MediaType.APPLICATION_XML)
     @Path("/return/{id}")
     public Response removeTicket(@PathParam("id") int id) {

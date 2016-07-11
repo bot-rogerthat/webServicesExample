@@ -32,37 +32,37 @@ public interface BookingServiceImpl {
     @Action(input = "http://service.booking/BookingServiceImpl/bookedTicketRequest", output = "http://service.booking/BookingServiceImpl/bookedTicketResponse")
     public int bookedTicket(
             @WebParam(name = "arg0", partName = "arg0")
-            int arg0,
+                    int arg0,
             @WebParam(name = "arg1", partName = "arg1")
-            Person arg1);
+                    Person arg1);
 
     /**
      * @param arg0
-     * @return returns java.lang.String
+     * @return returns booking.service.Ticket
      */
     @WebMethod
     @WebResult(partName = "return")
-    @Action(input = "http://service.booking/BookingServiceImpl/getTicketsRequest", output = "http://service.booking/BookingServiceImpl/getTicketsResponse")
-    public String getTickets(
+    @Action(input = "http://service.booking/BookingServiceImpl/getTicketByIdRequest", output = "http://service.booking/BookingServiceImpl/getTicketByIdResponse")
+    public Ticket getTicketById(
             @WebParam(name = "arg0", partName = "arg0")
-            int arg0);
+                    int arg0);
 
     /**
-     * @return returns java.lang.String
+     * @return returns booking.service.GroupTickets
      */
     @WebMethod
     @WebResult(partName = "return")
     @Action(input = "http://service.booking/BookingServiceImpl/getAllTicketsRequest", output = "http://service.booking/BookingServiceImpl/getAllTicketsResponse")
-    public String getAllTickets();
+    public GroupTickets getAllTickets();
 
     /**
      * @param arg0
      */
     @WebMethod
-    @Action(input = "http://service.booking/BookingServiceImpl/payTicketRequest", output = "http://service.booking/BookingServiceImpl/payTicketResponse")
-    public void payTicket(
+    @Action(input = "http://service.booking/BookingServiceImpl/buyTicketRequest", output = "http://service.booking/BookingServiceImpl/buyTicketResponse")
+    public void buyTicket(
             @WebParam(name = "arg0", partName = "arg0")
-            int arg0);
+                    int arg0);
 
     /**
      * @param arg0
@@ -71,6 +71,6 @@ public interface BookingServiceImpl {
     @Action(input = "http://service.booking/BookingServiceImpl/removeTicketRequest", output = "http://service.booking/BookingServiceImpl/removeTicketResponse")
     public void removeTicket(
             @WebParam(name = "arg0", partName = "arg0")
-            int arg0);
+                    int arg0);
 
 }

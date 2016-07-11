@@ -1,6 +1,8 @@
 package booking.service;
 
+import booking.model.GroupTickets;
 import booking.model.Person;
+import booking.model.Ticket;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
@@ -11,13 +13,13 @@ public interface BookingService {
     public int bookedTicket(int id, Person person);
 
     @WebMethod
-    public String getTickets(int id);
+    public Ticket getTicketById(int id);
 
     @WebMethod
-    public String getAllTickets();
+    public GroupTickets getAllTickets();
 
     @WebMethod
-    public void payTicket(int id);
+    public void buyTicket(int id);
 
     @WebMethod
     public void removeTicket(int id);

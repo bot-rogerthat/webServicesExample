@@ -1,14 +1,13 @@
 package booking.service;
 
+import booking.model.GroupTickets;
 import booking.model.Person;
 import booking.model.Ticket;
 import booking.model.TicketState;
-import booking.util.JsonSerializationUtil;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
-import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
@@ -52,27 +51,19 @@ public class BookingServiceImpl implements BookingService {
     }
 
     @WebMethod
-    public String getTickets(int id) {
-        try {
-            return JsonSerializationUtil.serialize(tickets.get(id));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return "";
+    public Ticket getTicketById(int id) {
+        return tickets.get(id);
     }
 
     @WebMethod
-    public String getAllTickets() {
-        try {
-            return JsonSerializationUtil.serialize(tickets);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return "";
+    public GroupTickets getAllTickets() {
+        GroupTickets result = new GroupTickets();
+        result.setTickets(tickets);
+        return result;
     }
 
     @WebMethod
-    public void payTicket(int id) {
+    public void buyTicket(int id) {
         Ticket ticket = tickets.get(id);
         ticket.setState(TicketState.BOUGHT);
     }

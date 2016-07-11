@@ -17,6 +17,7 @@ public class Ticket {
     private BigDecimal price;
     private TicketState state;
     private Person person;
+    private int uid;
 
     @XmlElement
     public String getArrivalCity() {
@@ -90,6 +91,15 @@ public class Ticket {
         this.person = person;
     }
 
+    @XmlElement
+    public int getUid() {
+        return uid;
+    }
+
+    public void setUid(int uid) {
+        this.uid = uid;
+    }
+
     @Override
     public String toString() {
         return "Ticket{" +
@@ -101,6 +111,7 @@ public class Ticket {
                 ", price=" + price +
                 ", state=" + state +
                 ", person=" + person +
+                ", uid=" + uid +
                 '}';
     }
 }

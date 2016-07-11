@@ -25,7 +25,7 @@ public class App {
         System.out.println(bs.getAllTickets());
 
         //buy ticket
-        bs.payTicket(0);
+        bs.buyTicket(0);
         System.out.println(bs.getAllTickets());
 
         //return ticket

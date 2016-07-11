@@ -1,6 +1,9 @@
 package booking.service;
 
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
+import javax.xml.namespace.QName;
 
 
 /**
@@ -19,6 +22,9 @@ import javax.xml.bind.annotation.XmlRegistry;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _GroupTicket_QNAME = new QName("http://service.booking/", "groupTicket");
+    private final static QName _Ticket_QNAME = new QName("http://service.booking/", "ticket");
+    private final static QName _Person_QNAME = new QName("http://service.booking/", "person");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: booking.service
@@ -27,10 +33,48 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Ticket }
+     */
+    public Ticket createTicket() {
+        return new Ticket();
+    }
+
+    /**
      * Create an instance of {@link Person }
      */
     public Person createPerson() {
         return new Person();
+    }
+
+    /**
+     * Create an instance of {@link GroupTickets }
+     */
+    public GroupTickets createGroupTickets() {
+        return new GroupTickets();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GroupTickets }{@code >}}
+     */
+    @XmlElementDecl(namespace = "http://service.booking/", name = "groupTicket")
+    public JAXBElement<GroupTickets> createGroupTicket(GroupTickets value) {
+        return new JAXBElement<GroupTickets>(_GroupTicket_QNAME, GroupTickets.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Ticket }{@code >}}
+     */
+    @XmlElementDecl(namespace = "http://service.booking/", name = "ticket")
+    public JAXBElement<Ticket> createTicket(Ticket value) {
+        return new JAXBElement<Ticket>(_Ticket_QNAME, Ticket.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Person }{@code >}}
+     */
+    @XmlElementDecl(namespace = "http://service.booking/", name = "person")
+    public JAXBElement<Person> createPerson(Person value) {
+        return new JAXBElement<Person>(_Person_QNAME, Person.class, null, value);
     }
 
 }
