@@ -1,3 +1,4 @@
+
 package booking.service.impl;
 
 import javax.xml.bind.annotation.XmlEnum;
@@ -6,7 +7,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for ticketState.
- * <p>
+ * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
@@ -18,6 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
+ * 
  */
 @XmlType(name = "ticketState")
 @XmlEnum

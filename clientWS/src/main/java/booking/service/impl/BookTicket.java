@@ -1,3 +1,4 @@
+
 package booking.service.impl;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -6,12 +7,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for bookedTicket complex type.
- * <p>
+ * <p>Java class for bookTicket complex type.
+ * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ * 
  * <pre>
- * &lt;complexType name="bookedTicket">
+ * &lt;complexType name="bookTicket">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -22,19 +23,22 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "bookedTicket", propOrder = {
-        "arg0",
-        "arg1"
+@XmlType(name = "bookTicket", propOrder = {
+    "arg0",
+    "arg1"
 })
-public class BookedTicket {
+public class BookTicket {
 
     protected int arg0;
     protected Person arg1;
 
     /**
      * Gets the value of the arg0 property.
+     * 
      */
     public int getArg0() {
         return arg0;
@@ -42,6 +46,7 @@ public class BookedTicket {
 
     /**
      * Sets the value of the arg0 property.
+     * 
      */
     public void setArg0(int value) {
         this.arg0 = value;
@@ -49,9 +54,11 @@ public class BookedTicket {
 
     /**
      * Gets the value of the arg1 property.
-     *
-     * @return possible object is
-     * {@link Person }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Person }
+     *     
      */
     public Person getArg1() {
         return arg1;
@@ -59,9 +66,11 @@ public class BookedTicket {
 
     /**
      * Sets the value of the arg1 property.
-     *
-     * @param value allowed object is
-     *              {@link Person }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Person }
+     *     
      */
     public void setArg1(Person value) {
         this.arg1 = value;

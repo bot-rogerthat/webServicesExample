@@ -1,14 +1,19 @@
+
 package booking.service.impl;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * <p>Java class for person complex type.
- * <p>
+ * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="person">
  *   &lt;complexContent>
@@ -23,12 +28,14 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "person", propOrder = {
-        "birthday",
-        "lastname",
-        "patronymic"
+    "birthday",
+    "lastname",
+    "patronymic"
 })
 public class Person {
 
@@ -41,9 +48,11 @@ public class Person {
 
     /**
      * Gets the value of the birthday property.
-     *
-     * @return possible object is
-     * {@link XMLGregorianCalendar }
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public XMLGregorianCalendar getBirthday() {
         return birthday;
@@ -51,9 +60,11 @@ public class Person {
 
     /**
      * Sets the value of the birthday property.
-     *
-     * @param value allowed object is
-     *              {@link XMLGregorianCalendar }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public void setBirthday(XMLGregorianCalendar value) {
         this.birthday = value;
@@ -61,9 +72,11 @@ public class Person {
 
     /**
      * Gets the value of the lastname property.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getLastname() {
         return lastname;
@@ -71,9 +84,11 @@ public class Person {
 
     /**
      * Sets the value of the lastname property.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setLastname(String value) {
         this.lastname = value;
@@ -81,9 +96,11 @@ public class Person {
 
     /**
      * Gets the value of the patronymic property.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getPatronymic() {
         return patronymic;
@@ -91,9 +108,11 @@ public class Person {
 
     /**
      * Sets the value of the patronymic property.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setPatronymic(String value) {
         this.patronymic = value;
@@ -101,9 +120,11 @@ public class Person {
 
     /**
      * Gets the value of the firstname property.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getFirstname() {
         return firstname;
@@ -111,9 +132,11 @@ public class Person {
 
     /**
      * Sets the value of the firstname property.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setFirstname(String value) {
         this.firstname = value;

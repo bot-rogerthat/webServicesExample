@@ -22,7 +22,7 @@ public class App {
         person.setFirstname("testFirstname");
         person.setLastname("testLastname");
         person.setPatronymic("testPatronymic");
-        bs.bookedTicket(1, person);
+        bs.bookTicket(1, person);
         System.out.println(bs.getAllTickets());
 
         //buy ticket

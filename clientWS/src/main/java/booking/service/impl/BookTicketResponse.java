@@ -1,3 +1,4 @@
+
 package booking.service.impl;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -7,12 +8,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for bookedTicketResponse complex type.
- * <p>
+ * <p>Java class for bookTicketResponse complex type.
+ * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ * 
  * <pre>
- * &lt;complexType name="bookedTicketResponse">
+ * &lt;complexType name="bookTicketResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -22,21 +23,25 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "bookedTicketResponse", propOrder = {
-        "_return"
+@XmlType(name = "bookTicketResponse", propOrder = {
+    "_return"
 })
-public class BookedTicketResponse {
+public class BookTicketResponse {
 
     @XmlElement(name = "return")
     protected Ticket _return;
 
     /**
      * Gets the value of the return property.
-     *
-     * @return possible object is
-     * {@link Ticket }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Ticket }
+     *     
      */
     public Ticket getReturn() {
         return _return;
@@ -44,9 +49,11 @@ public class BookedTicketResponse {
 
     /**
      * Sets the value of the return property.
-     *
-     * @param value allowed object is
-     *              {@link Ticket }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Ticket }
+     *     
      */
     public void setReturn(Ticket value) {
         this._return = value;

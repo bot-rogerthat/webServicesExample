@@ -1,3 +1,4 @@
+
 package booking.service.impl;
 
 import javax.xml.bind.annotation.*;
@@ -7,9 +8,9 @@ import java.math.BigDecimal;
 
 /**
  * <p>Java class for ticket complex type.
- * <p>
+ * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="ticket">
  *   &lt;complexContent>
@@ -29,17 +30,19 @@ import java.math.BigDecimal;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ticket", propOrder = {
-        "arrivalCity",
-        "arrivalDate",
-        "departureCity",
-        "departureDate",
-        "person",
-        "price",
-        "state",
-        "uid"
+    "arrivalCity",
+    "arrivalDate",
+    "departureCity",
+    "departureDate",
+    "person",
+    "price",
+    "state",
+    "uid"
 })
 public class Ticket {
 
@@ -59,9 +62,11 @@ public class Ticket {
 
     /**
      * Gets the value of the arrivalCity property.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getArrivalCity() {
         return arrivalCity;
@@ -69,9 +74,11 @@ public class Ticket {
 
     /**
      * Sets the value of the arrivalCity property.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setArrivalCity(String value) {
         this.arrivalCity = value;
@@ -79,9 +86,11 @@ public class Ticket {
 
     /**
      * Gets the value of the arrivalDate property.
-     *
-     * @return possible object is
-     * {@link XMLGregorianCalendar }
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public XMLGregorianCalendar getArrivalDate() {
         return arrivalDate;
@@ -89,9 +98,11 @@ public class Ticket {
 
     /**
      * Sets the value of the arrivalDate property.
-     *
-     * @param value allowed object is
-     *              {@link XMLGregorianCalendar }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public void setArrivalDate(XMLGregorianCalendar value) {
         this.arrivalDate = value;
@@ -99,9 +110,11 @@ public class Ticket {
 
     /**
      * Gets the value of the departureCity property.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getDepartureCity() {
         return departureCity;
@@ -109,9 +122,11 @@ public class Ticket {
 
     /**
      * Sets the value of the departureCity property.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setDepartureCity(String value) {
         this.departureCity = value;
@@ -119,9 +134,11 @@ public class Ticket {
 
     /**
      * Gets the value of the departureDate property.
-     *
-     * @return possible object is
-     * {@link XMLGregorianCalendar }
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public XMLGregorianCalendar getDepartureDate() {
         return departureDate;
@@ -129,9 +146,11 @@ public class Ticket {
 
     /**
      * Sets the value of the departureDate property.
-     *
-     * @param value allowed object is
-     *              {@link XMLGregorianCalendar }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public void setDepartureDate(XMLGregorianCalendar value) {
         this.departureDate = value;
@@ -139,9 +158,11 @@ public class Ticket {
 
     /**
      * Gets the value of the person property.
-     *
-     * @return possible object is
-     * {@link Person }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Person }
+     *     
      */
     public Person getPerson() {
         return person;
@@ -149,9 +170,11 @@ public class Ticket {
 
     /**
      * Sets the value of the person property.
-     *
-     * @param value allowed object is
-     *              {@link Person }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Person }
+     *     
      */
     public void setPerson(Person value) {
         this.person = value;
@@ -159,9 +182,11 @@ public class Ticket {
 
     /**
      * Gets the value of the price property.
-     *
-     * @return possible object is
-     * {@link BigDecimal }
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigDecimal }
+     *     
      */
     public BigDecimal getPrice() {
         return price;
@@ -169,9 +194,11 @@ public class Ticket {
 
     /**
      * Sets the value of the price property.
-     *
-     * @param value allowed object is
-     *              {@link BigDecimal }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigDecimal }
+     *     
      */
     public void setPrice(BigDecimal value) {
         this.price = value;
@@ -179,9 +206,11 @@ public class Ticket {
 
     /**
      * Gets the value of the state property.
-     *
-     * @return possible object is
-     * {@link TicketState }
+     * 
+     * @return
+     *     possible object is
+     *     {@link TicketState }
+     *     
      */
     public TicketState getState() {
         return state;
@@ -189,9 +218,11 @@ public class Ticket {
 
     /**
      * Sets the value of the state property.
-     *
-     * @param value allowed object is
-     *              {@link TicketState }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TicketState }
+     *     
      */
     public void setState(TicketState value) {
         this.state = value;
@@ -199,6 +230,7 @@ public class Ticket {
 
     /**
      * Gets the value of the uid property.
+     * 
      */
     public int getUid() {
         return uid;
@@ -206,6 +238,7 @@ public class Ticket {
 
     /**
      * Sets the value of the uid property.
+     * 
      */
     public void setUid(int value) {
         this.uid = value;
@@ -213,6 +246,7 @@ public class Ticket {
 
     /**
      * Gets the value of the id property.
+     * 
      */
     public int getId() {
         return id;
@@ -220,6 +254,7 @@ public class Ticket {
 
     /**
      * Sets the value of the id property.
+     * 
      */
     public void setId(int value) {
         this.id = value;
