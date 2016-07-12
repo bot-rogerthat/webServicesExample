@@ -1,6 +1,6 @@
 package booking;
 
-import booking.service.BookingServiceImpl;
+import booking.service.impl.BookingServiceImpl;
 
 import javax.xml.ws.Endpoint;
 

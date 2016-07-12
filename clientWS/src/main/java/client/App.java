@@ -1,14 +1,15 @@
 package client;
 
 
-import booking.service.BookingServiceImpl;
-import booking.service.BookingServiceImplService;
-import booking.service.Person;
+import booking.service.impl.BookingError_Exception;
+import booking.service.impl.BookingServiceImpl;
+import booking.service.impl.BookingServiceImplService;
+import booking.service.impl.Person;
 
 import java.net.MalformedURLException;
 
 public class App {
-    public static void main(String[] args) throws MalformedURLException {
+    public static void main(String[] args) throws MalformedURLException, BookingError_Exception {
 
         BookingServiceImplService bookingService = new BookingServiceImplService();
         BookingServiceImpl bs = bookingService.getBookingServiceImplPort();
@@ -21,15 +22,13 @@ public class App {
         person.setFirstname("testFirstname");
         person.setLastname("testLastname");
         person.setPatronymic("testPatronymic");
-        bs.bookedTicket(0, person);
+        bs.bookedTicket(1, person);
         System.out.println(bs.getAllTickets());
 
         //buy ticket
-        bs.buyTicket(0);
-        System.out.println(bs.getAllTickets());
+        System.out.println(bs.buyTicket(1));
 
         //return ticket
-        bs.removeTicket(0);
-        System.out.println(bs.getAllTickets());
+        System.out.println(bs.returnTicket(1));
     }
 }

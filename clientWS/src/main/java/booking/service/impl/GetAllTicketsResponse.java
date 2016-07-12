@@ -1,23 +1,24 @@
-package booking.service;
+package booking.service.impl;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import java.util.ArrayList;
 import java.util.List;
 
 
 /**
- * <p>Java class for groupTickets complex type.
+ * <p>Java class for getAllTicketsResponse complex type.
  * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;complexType name="groupTickets">
+ * &lt;complexType name="getAllTicketsResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="tickets" type="{http://service.booking/}ticket" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="return" type="{http://impl.service.booking/}ticket" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -25,26 +26,27 @@ import java.util.List;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "groupTickets", propOrder = {
-        "tickets"
+@XmlType(name = "getAllTicketsResponse", propOrder = {
+        "_return"
 })
-public class GroupTickets {
+public class GetAllTicketsResponse {
 
-    protected List<Ticket> tickets;
+    @XmlElement(name = "return", nillable = true)
+    protected List<Ticket> _return;
 
     /**
-     * Gets the value of the tickets property.
+     * Gets the value of the return property.
      * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the tickets property.
+     * This is why there is not a <CODE>set</CODE> method for the return property.
      * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getTickets().add(newItem);
+     *    getReturn().add(newItem);
      * </pre>
      * <p>
      * <p>
@@ -52,17 +54,11 @@ public class GroupTickets {
      * Objects of the following type(s) are allowed in the list
      * {@link Ticket }
      */
-    public List<Ticket> getTickets() {
-        if (tickets == null) {
-            tickets = new ArrayList<Ticket>();
+    public List<Ticket> getReturn() {
+        if (_return == null) {
+            _return = new ArrayList<Ticket>();
         }
-        return this.tickets;
+        return this._return;
     }
 
-    @Override
-    public String toString() {
-        return "GroupTickets{" +
-                "tickets=" + tickets +
-                '}';
-    }
 }

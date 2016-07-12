@@ -1,4 +1,4 @@
-package booking.service;
+package booking.service.impl;
 
 import javax.xml.namespace.QName;
 import javax.xml.ws.*;
@@ -11,13 +11,13 @@ import java.net.URL;
  * JAX-WS RI 2.2.9-b130926.1035
  * Generated source version: 2.2
  */
-@WebServiceClient(name = "BookingServiceImplService", targetNamespace = "http://service.booking/", wsdlLocation = "http://localhost:8088/booking?wsdl")
+@WebServiceClient(name = "BookingServiceImplService", targetNamespace = "http://impl.service.booking/", wsdlLocation = "http://localhost:8088/booking?wsdl")
 public class BookingServiceImplService
         extends Service {
 
     private final static URL BOOKINGSERVICEIMPLSERVICE_WSDL_LOCATION;
     private final static WebServiceException BOOKINGSERVICEIMPLSERVICE_EXCEPTION;
-    private final static QName BOOKINGSERVICEIMPLSERVICE_QNAME = new QName("http://service.booking/", "BookingServiceImplService");
+    private final static QName BOOKINGSERVICEIMPLSERVICE_QNAME = new QName("http://impl.service.booking/", "BookingServiceImplService");
 
     static {
         URL url = null;
@@ -60,7 +60,7 @@ public class BookingServiceImplService
      */
     @WebEndpoint(name = "BookingServiceImplPort")
     public BookingServiceImpl getBookingServiceImplPort() {
-        return super.getPort(new QName("http://service.booking/", "BookingServiceImplPort"), BookingServiceImpl.class);
+        return super.getPort(new QName("http://impl.service.booking/", "BookingServiceImplPort"), BookingServiceImpl.class);
     }
 
     /**
@@ -69,7 +69,7 @@ public class BookingServiceImplService
      */
     @WebEndpoint(name = "BookingServiceImplPort")
     public BookingServiceImpl getBookingServiceImplPort(WebServiceFeature... features) {
-        return super.getPort(new QName("http://service.booking/", "BookingServiceImplPort"), BookingServiceImpl.class, features);
+        return super.getPort(new QName("http://impl.service.booking/", "BookingServiceImplPort"), BookingServiceImpl.class, features);
     }
 
     private static URL __getWsdlLocation() {

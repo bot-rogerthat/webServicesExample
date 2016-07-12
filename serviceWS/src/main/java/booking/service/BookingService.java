@@ -1,8 +1,8 @@
 package booking.service;
 
-import booking.model.GroupTickets;
 import booking.model.Person;
 import booking.model.Ticket;
+import booking.service.impl.BookingError;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
@@ -10,17 +10,17 @@ import javax.jws.WebService;
 @WebService
 public interface BookingService {
     @WebMethod
-    public int bookedTicket(int id, Person person);
+    public Ticket bookTicket(int id, Person person) throws BookingError;
 
     @WebMethod
-    public Ticket getTicketById(int id);
+    public Ticket getTicketById(int id) throws BookingError;
 
     @WebMethod
-    public GroupTickets getAllTickets();
+    public Ticket[] getAllTickets();
 
     @WebMethod
-    public void buyTicket(int id);
+    public Ticket buyTicket(int id) throws BookingError;
 
     @WebMethod
-    public void removeTicket(int id);
+    public Ticket returnTicket(int id) throws BookingError;
 }

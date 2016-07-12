@@ -1,4 +1,4 @@
-package booking.service;
+package booking.service.impl;
 
 import javax.xml.bind.annotation.*;
 import javax.xml.datatype.XMLGregorianCalendar;

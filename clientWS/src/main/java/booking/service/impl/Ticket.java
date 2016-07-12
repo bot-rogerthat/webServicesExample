@@ -1,4 +1,4 @@
-package booking.service;
+package booking.service.impl;
 
 import javax.xml.bind.annotation.*;
 import javax.xml.datatype.XMLGregorianCalendar;
@@ -19,9 +19,9 @@ import java.math.BigDecimal;
  *         &lt;element name="arrivalDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="departureCity" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="departureDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
- *         &lt;element name="person" type="{http://service.booking/}person" minOccurs="0"/>
+ *         &lt;element name="person" type="{http://impl.service.booking/}person" minOccurs="0"/>
  *         &lt;element name="price" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="state" type="{http://service.booking/}ticketState" minOccurs="0"/>
+ *         &lt;element name="state" type="{http://impl.service.booking/}ticketState" minOccurs="0"/>
  *         &lt;element name="uid" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *       &lt;attribute name="id" use="required" type="{http://www.w3.org/2001/XMLSchema}int" />

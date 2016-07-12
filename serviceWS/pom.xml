@@ -11,34 +11,29 @@
 
     <properties>
         <jaxws.ver>2.2.10</jaxws.ver>
-        <cxf.ver>2.2.3</cxf.ver>
+        <cxf-common.ver>2.5.9</cxf-common.ver>
+        <cxf-rt-core.ver>2.7.9</cxf-rt-core.ver>
         <jaxws-commons.ver>2.2.1</jaxws-commons.ver>
-        <jackson.ver>1.9.13</jackson.ver>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>com.sun.xml.ws</groupId>
-            <artifactId>jaxws-rt</artifactId>
-            <version>${jaxws.ver}</version>
-            <type>pom</type>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-common-utilities</artifactId>
+            <version>${cxf-common.ver}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.cxf</groupId>
-            <artifactId>cxf-rt-frontend-jaxrs</artifactId>
-            <version>${cxf.ver}</version>
+            <artifactId>cxf-rt-core</artifactId>
+            <version>${cxf-rt-core.ver}</version>
         </dependency>
         <dependency>
             <groupId>org.jvnet.jax-ws-commons</groupId>
             <artifactId>jaxws-maven-plugin</artifactId>
             <version>${jaxws-commons.ver}</version>
         </dependency>
-        <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-mapper-asl</artifactId>
-            <version>${jackson.ver}</version>
-        </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -60,7 +55,7 @@
                             <goal>wsgen</goal>
                         </goals>
                         <configuration>
-                            <sei>booking.service.BookingServiceImpl</sei>
+                            <sei>booking.service.impl.BookingServiceImpl</sei>
                             <genWsdl>true</genWsdl>
                         </configuration>
                     </execution>
