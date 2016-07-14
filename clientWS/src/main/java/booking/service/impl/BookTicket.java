@@ -16,8 +16,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="arg0" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="arg1" type="{http://impl.service.booking/}person" minOccurs="0"/>
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="person" type="{http://impl.service.booking/}person" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -28,52 +28,52 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "bookTicket", propOrder = {
-    "arg0",
-    "arg1"
+    "id",
+    "person"
 })
 public class BookTicket {
 
-    protected int arg0;
-    protected Person arg1;
+    protected int id;
+    protected Person person;
 
     /**
-     * Gets the value of the arg0 property.
+     * Gets the value of the id property.
      * 
      */
-    public int getArg0() {
-        return arg0;
+    public int getId() {
+        return id;
     }
 
     /**
-     * Sets the value of the arg0 property.
+     * Sets the value of the id property.
      * 
      */
-    public void setArg0(int value) {
-        this.arg0 = value;
+    public void setId(int value) {
+        this.id = value;
     }
 
     /**
-     * Gets the value of the arg1 property.
+     * Gets the value of the person property.
      * 
      * @return
      *     possible object is
      *     {@link Person }
      *     
      */
-    public Person getArg1() {
-        return arg1;
+    public Person getPerson() {
+        return person;
     }
 
     /**
-     * Sets the value of the arg1 property.
+     * Sets the value of the person property.
      * 
      * @param value
      *     allowed object is
      *     {@link Person }
      *     
      */
-    public void setArg1(Person value) {
-        this.arg1 = value;
+    public void setPerson(Person value) {
+        this.person = value;
     }
 
 }

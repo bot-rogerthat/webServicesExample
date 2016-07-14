@@ -28,8 +28,8 @@ public interface BookingServiceImpl {
 
     /**
      * 
-     * @param arg1
-     * @param arg0
+     * @param person
+     * @param id
      * @return
      *     returns booking.service.impl.Ticket
      * @throws BookingError_Exception
@@ -42,16 +42,16 @@ public interface BookingServiceImpl {
         @FaultAction(className = BookingError_Exception.class, value = "http://impl.service.booking/BookingServiceImpl/bookTicket/Fault/BookingError")
     })
     public Ticket bookTicket(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        Person arg1)
+        @WebParam(name = "id", targetNamespace = "")
+        int id,
+        @WebParam(name = "person", targetNamespace = "")
+        Person person)
         throws BookingError_Exception
     ;
 
     /**
      * 
-     * @param arg0
+     * @param id
      * @return
      *     returns booking.service.impl.Ticket
      * @throws BookingError_Exception
@@ -64,8 +64,8 @@ public interface BookingServiceImpl {
         @FaultAction(className = BookingError_Exception.class, value = "http://impl.service.booking/BookingServiceImpl/getTicketById/Fault/BookingError")
     })
     public Ticket getTicketById(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0)
+        @WebParam(name = "id", targetNamespace = "")
+        int id)
         throws BookingError_Exception
     ;
 
@@ -83,7 +83,7 @@ public interface BookingServiceImpl {
 
     /**
      * 
-     * @param arg0
+     * @param id
      * @return
      *     returns booking.service.impl.Ticket
      * @throws BookingError_Exception
@@ -96,14 +96,14 @@ public interface BookingServiceImpl {
         @FaultAction(className = BookingError_Exception.class, value = "http://impl.service.booking/BookingServiceImpl/buyTicket/Fault/BookingError")
     })
     public Ticket buyTicket(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0)
+        @WebParam(name = "id", targetNamespace = "")
+        int id)
         throws BookingError_Exception
     ;
 
     /**
      * 
-     * @param arg0
+     * @param id
      * @return
      *     returns booking.service.impl.Ticket
      * @throws BookingError_Exception
@@ -116,8 +116,8 @@ public interface BookingServiceImpl {
         @FaultAction(className = BookingError_Exception.class, value = "http://impl.service.booking/BookingServiceImpl/returnTicket/Fault/BookingError")
     })
     public Ticket returnTicket(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0)
+        @WebParam(name = "id", targetNamespace = "")
+        int id)
         throws BookingError_Exception
     ;
 

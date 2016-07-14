@@ -7,6 +7,7 @@ import booking.service.BookingService;
 import booking.service.TicketService;
 
 import javax.jws.WebMethod;
+import javax.jws.WebParam;
 import javax.jws.WebService;
 import java.util.Random;
 
@@ -16,7 +17,7 @@ public class BookingServiceImpl implements BookingService {
     private TicketService ticketService = new TicketServiceImpl();
 
     @WebMethod
-    public Ticket bookTicket(int id, Person person) throws BookingError {
+    public Ticket bookTicket(@WebParam(name = "id") int id, @WebParam(name = "person") Person person) throws BookingError {
         Ticket ticket = ticketService.getTicketById(id);
         ticket.setPerson(person);
         ticket.setUid(generateId());
@@ -25,7 +26,7 @@ public class BookingServiceImpl implements BookingService {
     }
 
     @WebMethod
-    public Ticket getTicketById(int id) throws BookingError {
+    public Ticket getTicketById(@WebParam(name = "id") int id) throws BookingError {
         return ticketService.getTicketById(id);
     }
 
@@ -35,14 +36,14 @@ public class BookingServiceImpl implements BookingService {
     }
 
     @WebMethod
-    public Ticket buyTicket(int id) throws BookingError {
+    public Ticket buyTicket(@WebParam(name = "id") int id) throws BookingError {
         Ticket ticket = ticketService.getTicketById(id);
         ticket.setState(TicketState.BOUGHT);
         return ticket;
     }
 
     @WebMethod
-    public Ticket returnTicket(int id) throws BookingError {
+    public Ticket returnTicket(@WebParam(name = "id") int id) throws BookingError {
         return ticketService.returnTicket(id);
     }
 

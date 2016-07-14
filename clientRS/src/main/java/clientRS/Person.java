@@ -1,6 +1,5 @@
 package clientRS;
 
-import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Date;
@@ -12,7 +11,7 @@ public class Person {
     private String patronymic;
     private Date birthday;
 
-    @XmlAttribute
+    @XmlElement
     public String getFirstname() {
         return firstname;
     }
